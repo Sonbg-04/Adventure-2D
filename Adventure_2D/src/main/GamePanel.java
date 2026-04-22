@@ -24,7 +24,6 @@ import tile.Map;
 import tile.TileManager;
 import tileinteractive.InteractiveTile;
 
-@SuppressWarnings("serial")
 public class GamePanel extends JPanel implements Runnable {
 
 	// SCREEN SETTINGS
