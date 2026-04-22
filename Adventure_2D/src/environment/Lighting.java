@@ -32,7 +32,7 @@ public class Lighting {
 		if (this.gp.currentPlayer != null) {
 			if (this.gp.currentPlayer == this.gp.boy && this.gp.boy.type == this.gp.currentPlayer.type_player_boy) {
 				if (this.gp.boy.currentLight == null) {
-					g2.setColor(new Color(0, 0, 0.1F, 0.97F));
+					g2.setColor(new Color(0, 0, 0, 0.97F));
 				} else {
 					int centerX = this.gp.boy.screenX + (this.gp.tileSize) / 2;
 					int centerY = this.gp.boy.screenY + (this.gp.tileSize) / 2;
@@ -151,21 +151,8 @@ public class Lighting {
 	}
 
 	public void Update() {
-		this.setDayState();
-		if (this.gp.currentPlayer != null) {
-			if (this.gp.currentPlayer == this.gp.boy && this.gp.boy.type == this.gp.currentPlayer.type_player_boy) {
-				if (this.gp.boy.lightUpdated == true) {
-					this.setLightSource();
-					this.gp.boy.lightUpdated = false;
-				}
-			}
-			if (this.gp.currentPlayer == this.gp.girl && this.gp.girl.type == this.gp.currentPlayer.type_player_girl) {
-				if (this.gp.girl.lightUpdated == true) {
-					this.setLightSource();
-					this.gp.girl.lightUpdated = false;
-				}
-			}
-		}
+    	this.setDayState();
+    	this.setLightSource();
 	}
 
 	public void resetDay() {
